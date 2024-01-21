@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <meta name="author" content="Seu Nome">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicione outros estilos conforme necessário -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="title">
+        <div class="container">
+            <div class="row">
+                <h1>Resultados</h1>
+                <h2>Os resultados com base nos cards escolhidos:</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div id="resultInfo">
+                    <!-- Os resultados serão exibidos aqui -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Qualquer dúvida <a href="https://w.app/SeuNome" target="_blank">Seu Nome</a></p>
+    </footer>
+
+    <script>
+        // Recuperar o número do card e o nome armazenados no localStorage
+        var chosenCardIndex = localStorage.getItem("chosenCardIndex");
+        var chosenCardNameIndex = localStorage.getItem("chosenCardNameIndex");
+        var chosenCardIndex2 = localStorage.getItem("chosenCardIndex2");
+        var chosenCardNameIndex2 = localStorage.getItem("chosenCardNameIndex2");
+
+        // Exibir os resultados com base nos cards escolhidos
+        var resultInfo = document.getElementById("resultInfo");
+        resultInfo.innerHTML = "Você escolheu o card número: " + chosenCardIndex + " - " + chosenCardNameIndex + " do index.html<br>" +
+                               "Você escolheu o card número: " + chosenCardIndex2 + " - " + chosenCardNameIndex2 + " do index2.html";
+    </script>
+
+</body>
+
+</html>
